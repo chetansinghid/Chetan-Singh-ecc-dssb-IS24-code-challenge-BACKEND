@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend-builder:
+    image: maven:3.8.1-openjdk-11-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: mvn clean package
+
+  backend:
+    image: openjdk:11-jre-slim
+    working_dir: /app
+    volumes:
+      - ./target:/app
+    ports:
+      - "8080:8080"
+    command: ["java", "-jar", "slt-0.0.1-SNAPSHOT.jar"]
+    depends_on:
+      - backend-builder
