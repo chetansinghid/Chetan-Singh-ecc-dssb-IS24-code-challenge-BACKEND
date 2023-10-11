@@ -7,17 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/products")
 @Validated
-@CrossOrigin(maxAge = 3600)
+@CrossOrigin(originPatterns = "http://localhost:4200", maxAge = 3600)
 public class SltAppController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SltAppController.class);
@@ -28,4 +25,10 @@ public class SltAppController {
     public ResponseEntity<List<Product>> getAllProducts() {
         return ResponseEntity.ok(service.getAllProducts());
     }
+
+    @PostMapping(path = "/add", name = "POST/ADD")
+    public ResponseEntity<Product> saveToDB(@RequestBody @Validated Product product) {
+        return ResponseEntity.ok(service.saveProduct(product));
+    }
+
 }

@@ -25,4 +25,8 @@ public class ProductService {
         return products.stream().map(formatPDevelopersWithParenthesis).collect(Collectors.toList());
     }
 
+    public Product saveProduct(Product product) {
+        return repository.save(product);
+    }
+
 }

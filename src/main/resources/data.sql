@@ -39,6 +39,5 @@ VALUES
     ('Product KK', 'Daniel Lewis', 'Oliver Lewis, Emily Walker, Grace Davis', 'Sarah Taylor', '2026-01-08', 'Waterfall', 'https://www.example.com/productKK'),
     ('Product LL', 'Isabella Turner', 'Ava Foster, Noah King, Mia Davis', 'Liam Parker', '2026-02-15', 'Agile', 'https://www.example.com/productLL'),
     ('Product MM', 'Jack Turner', 'Henry Hall, Sarah Green, Daniel Lewis', 'Michael Johnson', '2026-03-20', 'Waterfall', 'https://www.example.com/productMM'),
-    ('Product NN', 'Mia Walker', 'Ella Adams, Olivia Turner, Ethan Walker', 'Ava Green', '2026-04-25', 'Waterfall', 'https://www.example.com/productNN'),
-    ('Product OO', 'Noah Wilson', 'Sophia Miller, William Smith, Jack Turner', 'Chloe Turner', '2026-05-30', 'Agile', 'https://www.example.com/productOO')
+    ('Product NN', 'Mia Walker', 'Ella Adams, Olivia Turner, Ethan Walker', 'Ava Green', '2026-04-25', 'Waterfall', 'https://www.example.com/productNN')
    ;
