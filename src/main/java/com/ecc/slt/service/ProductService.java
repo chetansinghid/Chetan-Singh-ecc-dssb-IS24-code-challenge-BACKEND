@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -29,4 +30,11 @@ public class ProductService {
         return repository.save(product);
     }
 
+    public Optional<Product> getProductByProductNumber(int pNumber) {
+        return repository.findById(pNumber);
+    }
+
+    public Product updateProduct(Product product) {
+        return repository.save(product);
+    }
 }
